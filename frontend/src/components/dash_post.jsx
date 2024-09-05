@@ -25,7 +25,7 @@ export default function DashPosts() {
           }
         }
       } catch (error) {
-        console.log(error.message);
+        // console.log(error.message);
       } finally {
         setLoading(false);
       }
@@ -45,28 +45,28 @@ export default function DashPosts() {
         }
       }
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
 
   const handleDeletePost = async () => {
     setShowModal(false);
     try {
-      const res = await fetch(`https://blogbreeze-nj8u.onrender.com/api/post/deletepost/${postIdToDelete}/${currentUser._id}`,
-        {
-          method: 'DELETE',
-        }
-      );
+      const res = await fetch(`https://blogbreeze-nj8u.onrender.com/api/post/deletepost/${postIdToDelete}/${currentUser._id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include', 
+      });
       const data = await res.json();
       if (!res.ok) {
-        console.log(data.message);
+        // console.log('Error:', data.message);
       } else {
-        setUserPosts((prev) =>
-          prev.filter((post) => post._id !== postIdToDelete)
-        );
+        setUserPosts((prev) => prev.filter((post) => post._id !== postIdToDelete));
       }
     } catch (error) {
-      console.log(error.message);
+      // console.log('Error:', error.message);
     }
   };
 

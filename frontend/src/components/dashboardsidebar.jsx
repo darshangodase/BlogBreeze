@@ -38,8 +38,6 @@ function Dashboardsidebar() {
     }
   };
 
-  // Debugging: Log currentUser to verify its value
-  console.log("Current User:", currentUser);
 
   return (
     <Sidebar className="w-full md:w-56">

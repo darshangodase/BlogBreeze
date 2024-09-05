@@ -25,7 +25,6 @@ export default function PostPage() {
             setUser(data);
           }
         } catch (error) {
-          console.log(error.message);
         }
       };
       getUser();
@@ -65,7 +64,7 @@ export default function PostPage() {
           setRecentPosts(data.posts);
         }
       } catch (error) {
-        console.log(error.message);
+        // console.log(error.message);
       }
     };
     fetchRecentPosts();
@@ -81,7 +80,7 @@ export default function PostPage() {
             setUserPosts(data.posts);
           }
         } catch (error) {
-          console.log(error.message);
+          // console.log(error.message);
         }
       };
       fetchUserPosts();

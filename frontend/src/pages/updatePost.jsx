@@ -33,7 +33,6 @@ export default function UpdatePost() {
   const { currentUser } = useSelector((state) => state.user);
 
   useEffect(() => {
-    console.log("postId from URL:", postId); // Log the postId for debugging
 
     const fetchPost = async () => {
       try {

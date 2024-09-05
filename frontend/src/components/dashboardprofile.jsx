@@ -88,7 +88,6 @@ function Dashboardprofile() {
     dispatch(updateStart());
   
     try {
-      console.log(currentUser._id);
       
       const res = await fetch(`https://blogbreeze-nj8u.onrender.com/api/user/update/${currentUser._id}`, {
         method: 'PUT',

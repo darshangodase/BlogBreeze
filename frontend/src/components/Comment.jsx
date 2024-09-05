@@ -18,7 +18,7 @@ export default function Comment({ comment, onLike, onEdit, onDelete }) {
           setUser(data);
         }
       } catch (error) {
-        console.log(error.message);
+        // console.log(error.message);
       }
     };
     getUser();
@@ -46,7 +46,7 @@ export default function Comment({ comment, onLike, onEdit, onDelete }) {
         onEdit(comment, editedContent);
       }
     } catch (error) {
-      console.log(error.message);
+      // console.log(error.message);
     }
   };
   
