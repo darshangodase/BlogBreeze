@@ -91,7 +91,7 @@ export default function Search() {
     const startIndex = numberOfPosts;
     const urlParams = new URLSearchParams(location.search);
     urlParams.set("startIndex", startIndex);
-    urlParams.set("limit", 9); // Set the limit to 10 posts
+    urlParams.set("limit", 9); 
     if (sidebarData.category === "uncategorized") {
       urlParams.delete("category");
     }
